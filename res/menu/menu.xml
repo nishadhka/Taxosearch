@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+menu/track"
+        android:title="Track"/>
+    <item
+        android:id="@+menu/tracks"
+        android:title="Tracks"/>
+    <item
+        android:id="@+menu/pois"
+        android:title="POIs"/>
+    <item
+        android:id="@+menu/maps"
+        android:title="Maps"/>
+    <item
+        android:id="@+menu/prefs"
+        android:title="Settings"/>
+    <item
+        android:id="@+menu/exit"
+        android:title="Exit"/>
+
+</menu>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:summary="Map"
+        android:title="Map" >
+        <EditTextPreference
+            android:key="mapFolder"
+            android:title="Maps folder" />
+
+        <Preference
+            android:key="mapFile"
+            android:title="Map file" />
+
+        <ListPreference
+            android:entries="@array/tileSize"
+            android:entryValues="@array/tileSize"
+            android:key="tileSize"
+            android:summary="Choose tiles size"
+            android:title="Tiles size" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:summary="Tracking settings"
+        android:title="Tracking" >
+        <ListPreference
+            android:entries="@array/trackStep"
+            android:entryValues="@array/trackStep"
+            android:key="trackStep"
+            android:summary="Minimum distance to register point"
+            android:title="Tracking step" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:summary="Backup and restore"
+        android:title="Backup" >
+        <Preference
+            android:key="export_tracks"
+            android:summary="Exports tracks to a file"
+            android:title="Export tracks" />
+        <Preference
+            android:key="import_tracks"
+            android:summary="Imports tracks from file"
+            android:title="Imports tracks" />
+        <Preference
+            android:key="export_poi"
+            android:summary="Exports points to a file"
+            android:title="Export poi" />
+        <Preference
+            android:key="import_poi"
+            android:summary="Imports points from file"
+            android:title="Import poi" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+prom/layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+dialog/btnGoto"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/btn_black"
+        android:text="Go to"
+        android:textColor="#EEEEEE" />
+
+    <Button
+        android:id="@+dialog/btnRename"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/btn_black"
+        android:text="Rename"
+        android:textColor="#EEEEEE" />
+
+    <Button
+        android:id="@+dialog/btnDelete"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/btn_black"
+        android:text="Delete"
+        android:textColor="#EEEEEE" />
+
+</LinearLayout>

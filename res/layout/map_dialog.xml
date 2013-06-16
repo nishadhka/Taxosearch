@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+prom/layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+dialog/btnAddPoint"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/btn_black"
+        android:text="Add point"
+        android:textColor="#EEEEEE" />
+
+    <Button
+        android:id="@+dialog/btnSetDest"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/btn_black"
+        android:text="Set destination"
+        android:textColor="#EEEEEE" />
+
+    <Button
+        android:id="@+dialog/btnShare"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/btn_black"
+        android:text="Share location"
+        android:textColor="#EEEEEE" />
+
+</LinearLayout>
