@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.fuchs.maps"
+    package="com.TSQG.quizgame"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -15,7 +15,7 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
         <activity
-            android:name="com.fuchs.maps.FMapsActivity"
+            android:name="com.TSQG.map.FMapsActivity"
             android:label="@string/app_name"
             android:screenOrientation="sensor" >
             <intent-filter>
@@ -24,38 +24,38 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MyPreferences"
+            android:name="com.TSQG.map.MyPreferences"
             android:theme="@android:style/Theme.Black.NoTitleBar" >
         </activity>
         <activity
-            android:name=".SelectTrackActivity"
+            android:name="com.TSQG.map.SelectTrackActivity"
             android:label="Select Track"
             android:screenOrientation="sensor"
             android:theme="@android:style/Theme.Dialog" >
         </activity>
         <activity
-            android:name=".SelectPOIActivity"
+            android:name="com.TSQG.map.SelectPOIActivity"
             android:label=""
             android:screenOrientation="sensor"
             android:theme="@android:style/Theme.Dialog" >
         </activity>
         <activity
-            android:name=".NamePOIActivity"
+            android:name="com.TSQG.map.NamePOIActivity"
             android:label="Set POI name"
             android:screenOrientation="sensor"
             android:theme="@android:style/Theme.Dialog" >
         </activity>
         <activity
-            android:name=".SelectMapActivity"
+            android:name="com.TSQG.map.SelectMapActivity"
             android:icon="@drawable/poi"
             android:label="Select Map"
             android:screenOrientation="sensor"
             android:theme="@android:style/Theme.Dialog" >
         </activity>
 		
-        <activity   android:name=".Newactivty" android:label="@string/app_name">  
+        <activity   android:name="com.TSQG.map.TSQ_wel" android:label="@string/app_name">  
         <intent-filter> 
-        <action android:name="com.fuchs.maps.Newactivty" />  
+        <action android:name="com.fuchs.maps.TSQ_wel" />  
         <category android:name="android.intent.category.DEFAULT" />  
         </intent-filter>   
         </activity>

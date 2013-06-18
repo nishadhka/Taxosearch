@@ -18,14 +18,6 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true" />
 
-    <Button
-        android:id="@+id/btnOptions"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/btn_black"
-        android:text="  ...  "
-        android:textColor="#EEEEEE" />
-
     <RadioButton
         android:id="@+id/radioFollow"
         android:layout_width="wrap_content"
@@ -55,5 +47,13 @@
         android:layout_marginLeft="14dp"
         android:layout_marginTop="14dp"
         android:src="@drawable/compass" />
+
+    <ImageView
+        android:id="@+id/imgQuest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imgDestX"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/qc" />
 
 </RelativeLayout>
