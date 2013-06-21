@@ -13,7 +13,12 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.Toast;
+import android.content.Intent;
 
+import com.tsqg.game.R;
 import com.tsqg.quiz.Question;
 
 /**
@@ -122,6 +127,7 @@ public class DBHelper extends SQLiteOpenHelper{
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
+	
 	}
 
 	@Override
@@ -131,14 +137,11 @@ public class DBHelper extends SQLiteOpenHelper{
 	// Add your public helper methods to access and get content from the database.
 	// You could return cursors by doing "return myDataBase.query(....)" so it'd be easy
 	// to you to create adapters for your views.
-
 	
-	
-	
-	public List<Question> getQuestionSet(int difficulty, int numQ){
+	public List<Question> getQuestionSet(int difficulty, int numQ, String plantNo){
 		List<Question> questionSet = new ArrayList<Question>();
 		Cursor c = myDataBase.rawQuery("SELECT * FROM questions WHERE DIFFICULTY=" + difficulty +
-				" ORDER BY RANDOM() LIMIT " + numQ, null);
+				" AND plantNo=" + plantNo + " ORDER BY RANDOM() LIMIT " + numQ, null);
 		while (c.moveToNext()){
 			//Log.d("QUESTION", "Question Found in DB: " + c.getString(1));
 			Question q = new Question();

@@ -318,9 +318,9 @@ public class FMapsActivity extends Activity implements IMapViewEventListener
 	        	 // here we convert the input to a string and show in a toast.
 	        	//String[] mThumbIds = {"11","12","13"};	
 	            String srt = input.getEditableText().toString();
-	        	 if(srt.matches("a1|a2|a3")){
+	        	 if(srt.matches("11|12|13")){
 	        		    Intent i = new Intent(FMapsActivity.this, SplashActivity.class);
-	        		    i.putExtra(srt,"quiz");
+	        		    i.putExtra("SRT",srt);
 	        		    startActivity(i);
 	        		}
 	        	 
