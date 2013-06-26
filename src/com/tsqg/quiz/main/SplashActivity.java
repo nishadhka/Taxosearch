@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.tsqg.game.R;
+import com.tsqg.maps.FMapsActivity;
 import com.tsqg.quiz.Constants;
 import com.tsqg.quiz.GamePlay;
 import com.tsqg.quiz.Question;
@@ -33,7 +34,7 @@ public class SplashActivity extends Activity implements OnClickListener{
 			return;
 		}
 		String value1 = extras.getString("SRT");
-		Toast.makeText(this,value1,Toast.LENGTH_LONG).show();
+		//Toast.makeText(this,value1,Toast.LENGTH_LONG).show();
 		if(value1.equals ("11")){
 			ImageView leafimg= (ImageView)findViewById(R.id.imageView2);
 			leafimg.setImageResource(R.drawable.hard_winner);
@@ -42,6 +43,8 @@ public class SplashActivity extends Activity implements OnClickListener{
 		//////// GAME MENU  /////////////////////////////////////////////////
 		Button playBtn = (Button) findViewById(R.id.button1);
 		playBtn.setOnClickListener(this);
+		Button tryanother = (Button) findViewById(R.id.button2);
+		tryanother.setOnClickListener(this);
 		//Intent i = getIntent();
 		//ImageView leafimg= (ImageView)findViewById(R.id.imageView2);
 		//String txtData = i.getExtras().getString(SRT,"");
@@ -89,6 +92,11 @@ public class SplashActivity extends Activity implements OnClickListener{
 			break;
 			
 		
+		case R.id.button2 :
+			Intent intent = new Intent(this,FMapsActivity.class);
+			intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			startActivity(intent);
+			    
 		}
 
 	}

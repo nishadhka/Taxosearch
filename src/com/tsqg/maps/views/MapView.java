@@ -57,7 +57,7 @@ public class MapView extends View
 		this.tilesSize = tilesSize;
 
 		tilesManager = new TilesManager(tilesSize, viewWidth, viewHeight);
-		tilesManager.setZoom(1);
+		tilesManager.setZoom(20);
 		tilesManager.setLocation(seekLocation.x, seekLocation.y);
 
 		// bitmapPaint.setFilterBitmap(true);

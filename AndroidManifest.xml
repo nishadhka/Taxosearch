@@ -16,7 +16,7 @@
         android:label="@string/app_name" 
        android:name="com.tsqg.quiz.main.ChuckApplication" >
         <activity
-            android:name="com.tsqg.maps.FMapsActivity"
+            android:name="com.tsqg.quiz.main.TSQ_wel"
             android:label="@string/app_name"
             android:screenOrientation="sensor" >
             <intent-filter>
@@ -53,20 +53,20 @@
             android:screenOrientation="sensor"
             android:theme="@android:style/Theme.Dialog" >
         </activity>
-		
-        <activity  
-        android:name="com.tsqg.quiz.main.TSQ_wel" 
-        android:screenOrientation="sensor"/>  
-        
+ 
         
         
         <activity   
         android:name="com.tsqg.quiz.main.SplashActivity"
         android:screenOrientation="sensor"/> 
         
-        
-        
+        <activity android:name="com.tsqg.maps.FMapsActivity" 
+            android:screenOrientation="sensor"/>
         <activity android:name="com.tsqg.quiz.main.QuestionActivity" 
+            android:screenOrientation="sensor"/>
+        <activity android:name="com.tsqg.quiz.main.QuestionActivity2" 
+            android:screenOrientation="sensor"/>
+        <activity android:name="com.tsqg.quiz.main.QuestionActivity3" 
             android:screenOrientation="sensor"/>
 		<activity android:name="com.tsqg.quiz.main.RulesActivity"
 		    android:screenOrientation="sensor" />

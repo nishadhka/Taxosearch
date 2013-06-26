@@ -60,8 +60,16 @@
         android:id="@+id/imgQuest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imgDestX"
         android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/radioFollow"
         android:src="@drawable/qc" />
+
+    <ImageView
+        android:id="@+id/imgHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/imgQuest"
+        android:src="@drawable/home" />
 
 </RelativeLayout>

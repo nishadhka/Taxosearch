@@ -5,7 +5,7 @@
 	android:layout_height="fill_parent" android:gravity="center_horizontal"
 	android:background="@drawable/background">
 
-	<LinearLayout android:orientation="horizontal"
+	<LinearLayout android:orientation="vertical"
 		android:layout_width="fill_parent" android:layout_height="wrap_content"
 		android:paddingTop="15dip" android:paddingBottom="15dip"
 		android:gravity="center_horizontal">
@@ -17,7 +17,7 @@
 
 
 
-	<LinearLayout android:orientation="horizontal"
+	<LinearLayout android:orientation="vertical"
 		android:layout_width="fill_parent" android:layout_height="wrap_content"
 		android:paddingTop="5dip" android:paddingBottom="5dip"
 		android:gravity="center_horizontal">
@@ -31,7 +31,7 @@
 
 	</LinearLayout>
 
-	<LinearLayout android:orientation="horizontal"
+	<LinearLayout android:orientation="vertical"
 		android:layout_width="fill_parent" android:layout_height="wrap_content"
 		android:paddingTop="5dip" android:paddingBottom="5dip"
 		android:gravity="center_horizontal">
@@ -44,7 +44,7 @@
 
 	</LinearLayout>
 
-	<LinearLayout android:orientation="horizontal"
+	<LinearLayout android:orientation="vertical"
 		android:layout_width="fill_parent" android:layout_height="wrap_content"
 		android:paddingTop="5dip" android:paddingBottom="5dip"
 		android:gravity="center_horizontal">
@@ -58,7 +58,7 @@
 	</LinearLayout>
 	
 	
-		<LinearLayout android:orientation="horizontal"
+		<LinearLayout android:orientation="vertical"
 		android:layout_width="fill_parent" android:layout_height="wrap_content"
 		android:paddingTop="5dip" android:paddingBottom="5dip"
 		android:gravity="center_horizontal">

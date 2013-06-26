@@ -4,6 +4,7 @@
 package com.tsqg.quiz.main;
 
 import android.app.Activity;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -45,6 +46,8 @@ public class EndgameActivity extends Activity implements OnClickListener {
 		Button finishBtn = (Button) findViewById(R.id.finishBtn);
 		finishBtn.setOnClickListener(this);
 		Button answerBtn = (Button) findViewById(R.id.answerBtn);
+		answerBtn.setOnClickListener(this);
+		Button searchBtn = (Button) findViewById(R.id.searchBtn);
 		answerBtn.setOnClickListener(this);
 		
 	}
@@ -91,6 +94,11 @@ public class EndgameActivity extends Activity implements OnClickListener {
 			Intent i = new Intent(this, AnswersActivity.class);
 			startActivityForResult(i, Constants.PLAYBUTTON);
 			break;
+			
+		case R.id.searchBtn :
+			Intent intent = new Intent(Intent.ACTION_VIEW);
+			intent.setComponent(new ComponentName("org.kiwix.kiwixmobile", "org.kiwix.kiwixmobile.KiwixMobileActivity"));
+			startActivity(intent);
 		}
 	}
 

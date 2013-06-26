@@ -10,6 +10,12 @@
         android:layout_height="420dp"
         android:src="@drawable/android3d" />
 
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Locate the leaf bearing tree in the image in your immediate vicinity and answer about the tree by starting the quiz" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

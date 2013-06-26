@@ -49,6 +49,7 @@ import com.tsqg.maps.views.overlays.POIOverlay;
 import com.tsqg.maps.views.overlays.PathOverlay;
 import com.tsqg.maps.views.overlays.PositionMarkerOverlay;
 import com.tsqg.quiz.main.SplashActivity;
+import com.tsqg.quiz.main.TSQ_wel;
 
 
 
@@ -63,7 +64,7 @@ public class FMapsActivity extends Activity implements IMapViewEventListener
 	ImageView imgDestX;
 	ImageView imgCompass;
 	ImageView imgQues;
-
+	ImageView imgHome;
 	PositionMarkerOverlay positionMarkerOverlay;
 	POIOverlay poiOverlay;
 	PathOverlay pathOverlay;
@@ -305,8 +306,8 @@ public class FMapsActivity extends Activity implements IMapViewEventListener
 	        public void onClick(View v) {
 	       /* Alert Dialog Code Start*/ 	
 	        	AlertDialog.Builder alert = new AlertDialog.Builder(this_);
-	        	alert.setTitle("Alert Dialog With EditText"); //Set Alert dialog title here
-	        	alert.setMessage("Enter Your Name Here"); //Message here
+	        	alert.setTitle("Reality augmentation"); //Set Alert dialog title here
+	        	alert.setMessage("Enter your current locality's nearby tree number"); //Message here
 
 	            // Set an EditText view to get user input 
 	            final EditText input = new EditText(this_);
@@ -347,7 +348,13 @@ public class FMapsActivity extends Activity implements IMapViewEventListener
 	       /* Alert Dialog Code End*/        
 	     }// End of onClick(View v)
 	  }); //button.setOnClickListener
-	
+		imgHome = (ImageView) findViewById(R.id.imgHome);
+		imgHome.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				Intent i = new Intent(FMapsActivity.this, TSQ_wel.class);
+				startActivity(i);
+			}
+		});
 		
 		mapView.refresh();
 	}

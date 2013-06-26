@@ -28,7 +28,7 @@ import com.tsqg.quiz.util.Utility;
  * @author robert.hinds
  *
  */
-public class QuestionActivity extends Activity implements OnClickListener{
+public class QuestionActivity3 extends Activity implements OnClickListener{
 
 	private Question currentQ;
 	private GamePlay currentGame;
@@ -53,14 +53,14 @@ public class QuestionActivity extends Activity implements OnClickListener{
         setQuestions();
 //        setChronometer();
         Chronometer chron = (Chronometer) this.findViewById(R.id.chronometer);
-        String srt = chron.getText().toString();
+       /* String srt = chron.getText().toString();
         //chron.start();
-        /*Bundle extras = getIntent().getExtras();
+        Bundle extras = getIntent().getExtras();
 		if (extras == null) {
 			return;
 		}
-		String chronoText = extras.getString("longi");*/
-    	/*int stoppedMilliseconds = 0;
+		String chronoText = extras.getString("longi");
+    	int stoppedMilliseconds = 0;
 
         String chronoText = chron.getText().toString();
         String array[] = chronoText.split(":");
@@ -168,7 +168,7 @@ public class QuestionActivity extends Activity implements OnClickListener{
 		/**
 		 * check if end of game
 		 */
-		/*else {//(currentGame.isGameOver()){
+		else {//(currentGame.isGameOver()){
 			//Log.d("Questions", "End of game! lets add up the scores..");
 			//Log.d("Questions", "Questions Correct: " + currentGame.getRight());
 			//Log.d("Questions", "Questions Wrong: " + currentGame.getWrong());
@@ -176,14 +176,22 @@ public class QuestionActivity extends Activity implements OnClickListener{
 			Intent i = new Intent(this, EndgameActivity.class);
 			startActivity(i);
 			finish();
-		}*/
-		else{
+		}
+		/*else{
 			//Long betime = getPreferences(MODE_PRIVATE).getLong("btime", 0);
 //			String srt = chron.getText().toString();
-			Intent i = new Intent(QuestionActivity.this, QuestionActivity2.class);
+			Intent i = new Intent(QuestionActivity.this, QuestionActivity.class);
+			Bundle b = new Bundle();
+            b.putString("key", srt);
+            i.putExtras(b);
+            startActivityForResult(i, 0);
+			//i.putExtra("longi",srt);
+			//i.putExtra("SRT",sbtime);
+			//chron.setBase(betime);
+			//chron.start();
 			startActivity(i);
 			finish();
-		}
+		}*/
 	}
 	
 	

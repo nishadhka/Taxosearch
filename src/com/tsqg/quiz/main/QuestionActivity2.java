@@ -28,7 +28,7 @@ import com.tsqg.quiz.util.Utility;
  * @author robert.hinds
  *
  */
-public class QuestionActivity extends Activity implements OnClickListener{
+public class QuestionActivity2 extends Activity implements OnClickListener{
 
 	private Question currentQ;
 	private GamePlay currentGame;
@@ -180,8 +180,16 @@ public class QuestionActivity extends Activity implements OnClickListener{
 		else{
 			//Long betime = getPreferences(MODE_PRIVATE).getLong("btime", 0);
 //			String srt = chron.getText().toString();
-			Intent i = new Intent(QuestionActivity.this, QuestionActivity2.class);
-			startActivity(i);
+			Intent i = new Intent(QuestionActivity2.this, QuestionActivity3.class);
+			/*Bundle b = new Bundle();
+            b.putString("key", srt);
+            i.putExtras(b);
+            startActivityForResult(i, 0);
+			//i.putExtra("longi",srt);
+			//i.putExtra("SRT",sbtime);
+			//chron.setBase(betime);
+			//chron.start();
+*/			startActivity(i);
 			finish();
 		}
 	}

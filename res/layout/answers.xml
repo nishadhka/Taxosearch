@@ -10,13 +10,13 @@
 		android:background="@drawable/background">
 	
 	
-		<LinearLayout android:orientation="horizontal"
+		<LinearLayout android:orientation="vertical"
 			android:layout_width="fill_parent" android:layout_height="wrap_content"
 			android:paddingTop="5dip" android:paddingBottom="5dip"
 			android:gravity="center_horizontal">
 	
 			<TextView android:layout_width="fill_parent"
-				android:layout_height="wrap_content" android:textColor="#ffffff"
+				android:layout_height="wrap_content" android:textColor="#000000"
 				android:textStyle="bold" android:id="@+id/answers"
 				android:paddingLeft="15dip" android:paddingRight="15dip"
 				android:gravity="center_horizontal"/>
@@ -24,7 +24,7 @@
 		</LinearLayout>
 
 		
-			<LinearLayout android:orientation="horizontal"
+			<LinearLayout android:orientation="vertical"
 			android:layout_width="fill_parent" android:layout_height="wrap_content"
 			android:paddingTop="5dip" android:paddingBottom="5dip"
 			android:gravity="center_horizontal">
@@ -34,7 +34,7 @@
 				android:layout_height="wrap_content" android:background="@drawable/button_selector"
 	
 				android:paddingTop="5dip" android:paddingBottom="5dip"
-				android:textColor="#ffffff" />
+				android:textColor="#FFFFFF" />
 	
 		</LinearLayout>
 	
