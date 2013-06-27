@@ -8,6 +8,7 @@ import java.util.List;
 import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.KeyEvent;
@@ -28,12 +29,12 @@ import com.tsqg.quiz.util.Utility;
  * @author robert.hinds
  *
  */
-public class QuestionActivity extends Activity implements OnClickListener{
+public class QuestionActivity extends Activity {
 
 	private Question currentQ;
 	private GamePlay currentGame;
 	Chronometer chron;
-	public String srt;
+	//String srten = chron.getText().toString();
    
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -44,88 +45,40 @@ public class QuestionActivity extends Activity implements OnClickListener{
          */
         currentGame = ((ChuckApplication)getApplication()).getCurrentGame();
         currentQ = currentGame.getNextQuestion();
-		Button nextBtn = (Button) findViewById(R.id.nextBtn);
-		nextBtn.setOnClickListener(this);
         
+		
+	
         /**
          * Update the question and answer options..
          */
         setQuestions();
-//        setChronometer();
-        Chronometer chron = (Chronometer) this.findViewById(R.id.chronometer);
-        String srt = chron.getText().toString();
-        //chron.start();
-        /*Bundle extras = getIntent().getExtras();
-		if (extras == null) {
-			return;
-		}
-		String chronoText = extras.getString("longi");*/
-    	/*int stoppedMilliseconds = 0;
 
-        String chronoText = chron.getText().toString();
-        String array[] = chronoText.split(":");
-        if (array.length == 2) {
-          stoppedMilliseconds = Integer.parseInt(array[0]) * 60 * 1000
-              + Integer.parseInt(array[1]) * 1000;
-        } else if (array.length == 3) {
-          stoppedMilliseconds = Integer.parseInt(array[0]) * 60 * 60 * 1000 
-              + Integer.parseInt(array[1]) * 60 * 1000
-              + Integer.parseInt(array[2]) * 1000;
-       }
-
-        chron.setBase(SystemClock.elapsedRealtime() - stoppedMilliseconds);
-        chron.start();*/
-        /***
-         * Chronometer implementation Nishadh K A try 1
-         */
-       /* Chronometer chron = (Chronometer) this.findViewById(R.id.chronometer);
+        final Chronometer chron = (Chronometer) this.findViewById(R.id.chronometer);
         chron.start();
-        long btime= chron.getBase();
-        if (btime <= 10){
-            chron.stop();
-          }
-        else{
         
-        int stoppedMilliseconds = 0;
-
-        String chronoText = chron.getText().toString();
-        String array[] = chronoText.split(":");
-        if (array.length == 2) {
-          stoppedMilliseconds = Integer.parseInt(array[0]) * 60 * 1000
-              + Integer.parseInt(array[1]) * 1000;
-        } else if (array.length == 3) {
-          stoppedMilliseconds = Integer.parseInt(array[0]) * 60 * 60 * 1000 
-              + Integer.parseInt(array[1]) * 60 * 1000
-              + Integer.parseInt(array[2]) * 1000;
-        }
-
-        chron.setBase(SystemClock.elapsedRealtime() - stoppedMilliseconds);
-        chron.start();	
-        }*/
+        Button nextBtn = (Button) findViewById(R.id.nextBtn);
+		nextBtn.setOnClickListener(new View.OnClickListener() {
+			@Override
+		     public void onClick(View v) {
+			 if (!checkAnswer()) return;	
+			 String srten = chron.getText().toString();
+			 Intent i = new Intent(QuestionActivity.this, QuestionActivity2.class);
+				i.putExtra("longi",srten);
+				startActivity(i);
+				finish();
+		     }
+		 });
+        /*String srt1 = chron.getText().toString();
+        SharedPreferences myPrefs = this.getSharedPreferences("que1str", MODE_WORLD_READABLE);
+        SharedPreferences.Editor prefsEditor = myPrefs.edit();
+        prefsEditor.putString("que1strK", srt1);
+        //Not forgot to commit.
+        prefsEditor.commit();*/
+        //String srt = chron.getText().toString();
+     
     }
           
-    /*private void setChronometer () {
-    	Bundle extras = getIntent().getExtras();
-		if (extras == null) {
-			return;
-		}
-		String chronoText = extras.getString("longi");
-    	int stoppedMilliseconds = 0;
-
-       //String chronoText = mChr.getText().toString();
-        String array[] = chronoText.split(":");
-        if (array.length == 2) {
-          stoppedMilliseconds = Integer.parseInt(array[0]) * 60 * 1000
-              + Integer.parseInt(array[1]) * 1000;
-        } else if (array.length == 3) {
-          stoppedMilliseconds = Integer.parseInt(array[0]) * 60 * 60 * 1000 
-              + Integer.parseInt(array[1]) * 60 * 1000
-              + Integer.parseInt(array[2]) * 1000;
-       }
-
-        chron.setBase(SystemClock.elapsedRealtime() - stoppedMilliseconds);
-        chron.start();
-      }*/
+   
    
 	/**
 	 * Method to set the text for the question and answers from the current games
@@ -151,58 +104,38 @@ public class QuestionActivity extends Activity implements OnClickListener{
         TextView option4 = (TextView) findViewById(R.id.answer4);
         option4.setText(Utility.capitalise(answers.get(3)));
 	}
-	//String srt = chron.getText().toString();
+	
+	
+	/*View.OnClickListener mStartListener = new OnClickListener() {
 	@Override
-	public void onClick(View arg0) 
+	public void onClick(View v) 
 	
 	{
-		//Log.d("Questions", "Moving to next question");
-		//String srt = time.getText().toString();
-		/**
+		//Intent i;
+		switch (v.getId()){
+		case R.id.nextBtn :
+		
+		//String srt = chron.getText().toString();
+		*//**
 		 * validate a checkbox has been selected
-		 */
+		 *//*
 		
 		if (!checkAnswer()) return;
 
 		
-		/**
+		*//**
 		 * check if end of game
-		 */
-		/*else {//(currentGame.isGameOver()){
-			//Log.d("Questions", "End of game! lets add up the scores..");
-			//Log.d("Questions", "Questions Correct: " + currentGame.getRight());
-			//Log.d("Questions", "Questions Wrong: " + currentGame.getWrong());
-			
-			Intent i = new Intent(this, EndgameActivity.class);
-			startActivity(i);
-			finish();
-		}*/
-		else{
-			//Long betime = getPreferences(MODE_PRIVATE).getLong("btime", 0);
-//			String srt = chron.getText().toString();
-			Intent i = new Intent(QuestionActivity.this, QuestionActivity2.class);
-			startActivity(i);
-			finish();
-		}
-	}
-	
-	
-	//@Override
-	/*public void onClick1(View v) {
-		Intent i;
+		 *//*
 		
-		switch (v.getId()){
-		case R.id.searchBtn :
-			
-			Intent intent = new Intent(Intent.ACTION_MAIN);
-			intent.setComponent(new ComponentName("org.kiwix.kiwixmobile", "org.kiwix.kiwixmobile.KiwixMobileActivity"));
-			startActivity(intent);
-		}
-			
-		}*/
-	
-	
-	
+		
+			//String srt = chron.getText().toString();
+			Intent i = new Intent(QuestionActivity.this, QuestionActivity2.class);
+			i.putExtra("longi",srten);
+			startActivity(i);
+			finish();
+	}
+	}
+	};*/
 	
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event)
