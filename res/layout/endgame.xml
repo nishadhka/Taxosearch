@@ -49,11 +49,11 @@
 				android:paddingTop="5dip" android:paddingBottom="5dip"
 				android:textColor="#FFFFFF" />
 			
-			<Button android:text="Taxosearch" android:id="@+id/searchBtn"
+			<!-- <Button android:text="Try another" android:id="@+id/searchBtn"
 			android:layout_width="100dip" android:layout_alignParentRight="true"
 			android:layout_height="wrap_content" android:background="@drawable/button_selector"
 			android:paddingTop="5dip" android:paddingBottom="5dip"
-			android:textColor="#FFFFFF" />
+			android:textColor="#FFFFFF" /> -->
 
 		</LinearLayout>
 

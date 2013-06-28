@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.tsqg.game.R;
+import com.tsqg.maps.FMapsActivity;
 import com.tsqg.quiz.Constants;
 import com.tsqg.quiz.GamePlay;
 import com.tsqg.quiz.Helper;
@@ -31,7 +32,12 @@ public class EndgameActivity extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.endgame);
 		GamePlay currentGame = ((ChuckApplication)getApplication()).getCurrentGame();
-		String result = "You Got " + currentGame.getRight() + "/" + currentGame.getNumRounds() + ".. ";
+		Bundle extras = getIntent().getExtras();
+		if (extras == null) {
+			return;
+		}
+		String chronoText = extras.getString("longi3");
+		String result = "You Got " + currentGame.getRight() + "/" + currentGame.getNumRounds() + " and took " + chronoText + " Seconds/Minutes to complete the quiz " ;
 		String comment = Helper.getResultComment(currentGame.getRight(), currentGame.getNumRounds(), getDifficultySettings());
 		
 		
@@ -47,9 +53,9 @@ public class EndgameActivity extends Activity implements OnClickListener {
 		finishBtn.setOnClickListener(this);
 		Button answerBtn = (Button) findViewById(R.id.answerBtn);
 		answerBtn.setOnClickListener(this);
-		Button searchBtn = (Button) findViewById(R.id.searchBtn);
+		/*Button searchBtn = (Button) findViewById(R.id.searchBtn);
 		answerBtn.setOnClickListener(this);
-		
+*/		
 	}
 	
 	
@@ -87,18 +93,19 @@ public class EndgameActivity extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		switch (v.getId()){
 		case R.id.finishBtn :
-			finish();
+			Intent i = new Intent(EndgameActivity.this, TSQ_wel.class);
+			startActivity(i);
 			break;
 			
 		case R.id.answerBtn :
-			Intent i = new Intent(this, AnswersActivity.class);
-			startActivityForResult(i, Constants.PLAYBUTTON);
+			Intent ip = new Intent(this, AnswersActivity.class);
+			startActivityForResult(ip, Constants.PLAYBUTTON);
 			break;
 			
-		case R.id.searchBtn :
-			Intent intent = new Intent(Intent.ACTION_VIEW);
-			intent.setComponent(new ComponentName("org.kiwix.kiwixmobile", "org.kiwix.kiwixmobile.KiwixMobileActivity"));
-			startActivity(intent);
+		/*case R.id.searchBtn :
+			Intent intent = new Intent(this,FMapsActivity.class);
+			intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			startActivity(intent);*/
 		}
 	}
 

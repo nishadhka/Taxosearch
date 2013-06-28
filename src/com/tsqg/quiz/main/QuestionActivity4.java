@@ -8,7 +8,6 @@ import java.util.List;
 import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.KeyEvent;
@@ -30,7 +29,7 @@ import com.tsqg.quiz.util.Utility;
  * @author robert.hinds
  *
  */
-public class QuestionActivity2 extends Activity {
+public class QuestionActivity4 extends Activity {
 
 	private Question currentQ;
 	private GamePlay currentGame;
@@ -46,7 +45,6 @@ public class QuestionActivity2 extends Activity {
          */
         currentGame = ((ChuckApplication)getApplication()).getCurrentGame();
         currentQ = currentGame.getNextQuestion();
-		
         
         /**
          * Update the question and answer options..
@@ -56,7 +54,7 @@ public class QuestionActivity2 extends Activity {
 		if (extras == null) {
 			return;
 		}
-		String chronoText = extras.getString("longi");
+		String chronoText = extras.getString("longi2");
         //Toast.makeText(this, "Elapsed milliseconds: " + chronoText, Toast.LENGTH_SHORT).show();
 
         final Chronometer chron = (Chronometer) this.findViewById(R.id.chronometer);
@@ -85,9 +83,9 @@ public class QuestionActivity2 extends Activity {
 			@Override
 		     public void onClick(View v) {
 			 if (!checkAnswer()) return;	
-			 String srten1 = chron.getText().toString();
-			 Intent i = new Intent(QuestionActivity2.this, QuestionActivity3.class);
-				i.putExtra("longi1",srten1);
+			 String srten3 = chron.getText().toString();
+			 Intent i = new Intent(QuestionActivity4.this, EndgameActivity.class);
+				i.putExtra("longi3",srten3);
 				startActivity(i);
 				finish();
 		     }
@@ -140,9 +138,9 @@ public class QuestionActivity2 extends Activity {
 		 *//*
 		
 		else{
-			String srt2 = chron.getText().toString();
-			Intent i = new Intent(QuestionActivity2.this, QuestionActivity3.class);
-			i.putExtra("longi2",srt2);
+			//String srt1 = chron.getText().toString();
+			Intent i = new Intent(QuestionActivity3.this, EndgameActivity.class);
+			//i.putExtra("longi",srt1);
 			startActivity(i);
 			finish();
 		}

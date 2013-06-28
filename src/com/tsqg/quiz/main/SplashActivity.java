@@ -35,10 +35,44 @@ public class SplashActivity extends Activity implements OnClickListener{
 		}
 		String value1 = extras.getString("SRT");
 		//Toast.makeText(this,value1,Toast.LENGTH_LONG).show();
+		/*
+		loc 17 = tree3
+		loc 16 = tree1
+		loc 12 = tree7
+		loc 11 = tree6
+		loc 19 = tree5
+		loc 13 = tree4
+		loc 18 = tree2
+		*/
+		if(value1.equals ("17")){
+			ImageView leafimg= (ImageView)findViewById(R.id.imageView2);
+			leafimg.setImageResource(R.drawable.tree3);
+		} 
+		if(value1.equals ("16")){
+			ImageView leafimg= (ImageView)findViewById(R.id.imageView2);
+			leafimg.setImageResource(R.drawable.tree1);
+		} 
+		if(value1.equals ("12")){
+			ImageView leafimg= (ImageView)findViewById(R.id.imageView2);
+			leafimg.setImageResource(R.drawable.tree7);
+		} 
 		if(value1.equals ("11")){
 			ImageView leafimg= (ImageView)findViewById(R.id.imageView2);
-			leafimg.setImageResource(R.drawable.hard_winner);
+			leafimg.setImageResource(R.drawable.tree6);
 		} 
+		if(value1.equals ("19")){
+			ImageView leafimg= (ImageView)findViewById(R.id.imageView2);
+			leafimg.setImageResource(R.drawable.tree5);
+		} 
+		if(value1.equals ("13")){
+			ImageView leafimg= (ImageView)findViewById(R.id.imageView2);
+			leafimg.setImageResource(R.drawable.tree4);
+		} 
+		if(value1.equals ("18")){
+			ImageView leafimg= (ImageView)findViewById(R.id.imageView2);
+			leafimg.setImageResource(R.drawable.tree2);
+		} 
+		
 		//////////////////////////////////////////////////////////////////////
 		//////// GAME MENU  /////////////////////////////////////////////////
 		Button playBtn = (Button) findViewById(R.id.button1);
@@ -145,10 +179,19 @@ public class SplashActivity extends Activity implements OnClickListener{
 	 */
 	private int getNumQuestions() {
 		SharedPreferences settings = getSharedPreferences(Constants.SETTINGS, 0);
-		int numRounds = settings.getInt(Constants.NUM_ROUNDS, 3);
+		int numRounds = settings.getInt(Constants.NUM_ROUNDS, 4);
 		return numRounds;
 	}
 	
+	/*
+	loc 17 = tree3
+	loc 16 = tree1
+	loc 12 = tree7
+	loc 11 = tree6
+	loc 19 = tree5
+	loc 13 = tree4
+	loc 18 = tree2
+	*/
 	private String getplantNo() {
 		Bundle extras = getIntent().getExtras();
 		if (extras == null) {
@@ -157,9 +200,27 @@ public class SplashActivity extends Activity implements OnClickListener{
 		String userEntry = extras.getString("SRT");
 		String plantNo = null;
 		if(userEntry.equals ("11")){
-		plantNo = "1";
+		plantNo = "6";
 	}
 		if(userEntry.equals ("12")){
+			plantNo = "7";
+		}
+		if(userEntry.equals ("16")){
+			plantNo = "1";
+		}
+		if(userEntry.equals ("12")){
+			plantNo = "7";
+		}
+		if(userEntry.equals ("17")){
+			plantNo = "3";
+		}
+		if(userEntry.equals ("19")){
+			plantNo = "5";
+		}
+		if(userEntry.equals ("13")){
+			plantNo = "4";
+		}
+		if(userEntry.equals ("18")){
 			plantNo = "2";
 		}
 		return plantNo;

@@ -33,9 +33,7 @@ public class TSQ_wel extends Activity implements OnClickListener{
 		settingsBtn.setOnClickListener(this);
 		Button rulesBtn = (Button) findViewById(R.id.rulesBtn);
 		rulesBtn.setOnClickListener(this);
-		Button exitBtn = (Button) findViewById(R.id.exitBtn);
-		exitBtn.setOnClickListener(this);
-	}
+		}
 
 
 	/**
@@ -62,9 +60,6 @@ public class TSQ_wel extends Activity implements OnClickListener{
 			startActivityForResult(i, Constants.SETTINGSBUTTON);
 			break;
 			
-		case R.id.exitBtn :
-			finish();
-			break;
 		}
 }
 }

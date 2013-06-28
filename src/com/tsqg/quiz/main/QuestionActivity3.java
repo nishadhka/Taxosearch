@@ -55,7 +55,7 @@ public class QuestionActivity3 extends Activity {
 			return;
 		}
 		String chronoText = extras.getString("longi1");
-        Toast.makeText(this, "Elapsed milliseconds: " + chronoText, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Elapsed milliseconds: " + chronoText, Toast.LENGTH_SHORT).show();
 
         final Chronometer chron = (Chronometer) this.findViewById(R.id.chronometer);
         
@@ -84,7 +84,7 @@ public class QuestionActivity3 extends Activity {
 		     public void onClick(View v) {
 			 if (!checkAnswer()) return;	
 			 String srten2 = chron.getText().toString();
-			 Intent i = new Intent(QuestionActivity3.this, EndgameActivity.class);
+			 Intent i = new Intent(QuestionActivity3.this, QuestionActivity4.class);
 				i.putExtra("longi2",srten2);
 				startActivity(i);
 				finish();
