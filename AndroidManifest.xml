@@ -18,7 +18,7 @@
         <activity
             android:name="com.tsqg.quiz.main.TSQ_wel"
             android:label="@string/app_name"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="sensor" >
             <intent-filter>
                <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -31,26 +31,26 @@
         <activity
             android:name="com.tsqg.maps.SelectTrackActivity"
             android:label="Select Track"
-            android:screenOrientation="portrait"
+            android:screenOrientation="sensor"
             android:theme="@android:style/Theme.Dialog" >
         </activity>
         <activity
             android:name="com.tsqg.maps.SelectPOIActivity"
             android:label=""
-            android:screenOrientation="portrait"
+            android:screenOrientation="sensor"
             android:theme="@android:style/Theme.Dialog" >
         </activity>
         <activity
             android:name="com.tsqg.maps.NamePOIActivity"
             android:label="Set POI name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="sensor"
             android:theme="@android:style/Theme.Dialog" >
         </activity>
         <activity
             android:name="com.tsqg.maps.SelectMapActivity"
             android:icon="@drawable/poi"
             android:label="Select Map"
-            android:screenOrientation="portrait"
+            android:screenOrientation="sensor"
             android:theme="@android:style/Theme.Dialog" >
         </activity>
  
@@ -58,26 +58,26 @@
         
         <activity   
         android:name="com.tsqg.quiz.main.SplashActivity"
-        android:screenOrientation="portrait"/> 
+        android:screenOrientation="sensor"/> 
         
         <activity android:name="com.tsqg.maps.FMapsActivity" 
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="sensor"/>
         <activity android:name="com.tsqg.quiz.main.QuestionActivity" 
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="sensor"/>
         <activity android:name="com.tsqg.quiz.main.QuestionActivity2" 
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="sensor"/>
         <activity android:name="com.tsqg.quiz.main.QuestionActivity3" 
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="sensor"/>
         <activity android:name="com.tsqg.quiz.main.QuestionActivity4" 
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="sensor"/>
 		<activity android:name="com.tsqg.quiz.main.RulesActivity"
-		    android:screenOrientation="portrait" />
+		    android:screenOrientation="sensor" />
 		<activity android:name="com.tsqg.quiz.main.EndgameActivity"
-		    android:screenOrientation="portrait" />
+		    android:screenOrientation="sensor" />
 		<activity android:name="com.tsqg.quiz.main.SettingsActivity"
-		    android:screenOrientation="portrait" />
+		    android:screenOrientation="sensor" />
 		<activity android:name="com.tsqg.quiz.main.AnswersActivity"
-		    android:screenOrientation="portrait" />
+		    android:screenOrientation="sensor" />
         <service
             android:name="com.fuchs.tracking.TrackerService"
             android:label="Tracker Service" />
